@@ -1,0 +1,29 @@
+title: gifakira
+baseurl: "" 
+url: "https://gifakira.com"
+
+# Build settings
+markdown: kramdown
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - webpack.config.js
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - webpack.config.json
+  - src
+  - README.md
+  - Documentation
+
+page_gen:
+  - index_files: false
+    data: scenes
+    template: scene
+    name: id
+    dir: scenes

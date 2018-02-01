@@ -1,0 +1,27 @@
+
+#not_found video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+#not_found h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    font-size: 200px;
+    letter-spacing: 100px;
+    margin-right: -100px;
+}
+
+.right4 {
+    display: inline-block;
+    transform: scaleX(-1);
+}
+

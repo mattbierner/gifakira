@@ -1,0 +1,60 @@
+#stream .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -20px;
+    margin-top: -20px;
+    width: calc(100% + 40px) !important;
+    height: calc(100% + 40px) !important;
+    object-fit: cover;
+    z-index: -10;
+    filter: blur(10px);
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+#stream article {
+    height: 100%;
+}
+
+#stream .foreground-video {
+    height: 100%;
+    position: relative;
+
+    video {
+        position: absolute;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: fit;
+        display: none;
+    }
+
+    video:first-child {
+        display: block;
+    }
+}
+
+#stream.fullscreen .foreground-video video {
+    object-fit: cover;
+}
+
+#stream .controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+
+    & > * {
+        width: 100px;
+    }
+}
+
+#stream .page-header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}

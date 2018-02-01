@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ page.id }}/{{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@gif_akira" />
+    <meta name="twitter:creator" content="@mattbierner">
+    <meta name="twitter:title" content="{{ page.id }}/{{ site.title }}" />
+    <meta name="twitter:image" content="https://media.gifakira.com/scenes/{{ page.id }}-320.gif" />
+
+    {% include default_styles.html %}
+    {% include default_scripts.html %}
+</head>
+
+<body id="scene">
+    <div class="loading-container">
+        <div class="loader">Loading...</div>
+    </div>
+
+    <canvas class="background-video"></canvas>
+    <article>
+        <header class="page-header">
+            <a href="/">
+                <img src="/static/images/title.svg" alt="gifakira" width="64px" height="32px" />
+            </a>
+        </header>
+
+        <div class="foreground-video">
+            <video loop autoplay muted playsinline src="https://media.gifakira.com/scenes/{{ page.id }}-640.mp4">
+        </div>
+
+        <nav class="controls">
+            <button id="toggle-aspect-button"></button>
+            <button id="shuffle-button">random</button>
+            <button id="share-button" role="button">share</a>
+        </nav>
+    </article>
+
+    <div id="share">
+        <div class="content">
+            <div id="share-panel">
+                <h2>Share</h2>
+                {% capture page_url %}{{ site.url }}/scenes/{{ page.id }}{% endcapture%}
+                <div class="link">
+                    <span class="label">PAGE</span>
+                    <input type="text" readonly value="{{ page_url }}.html">
+                </div>
+                <div class="link">
+                    <span class="label">GIF</span>
+                    <input type="text" readonly value="https://media.gifakira.com/scenes/{{ page.id }}-320.gif">
+                </div>
+                <div class="link">
+                    <span class="label">VIDEO</span>
+                    <input type="text" readonly value="https://media.gifakira.com/scenes/{{ page.id }}-640.mp4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/scripts/scene.js"></script>
+</body>
+
+</html>

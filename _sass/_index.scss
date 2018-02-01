@@ -1,0 +1,41 @@
+#index {
+    position: relative;
+    height: 100%;
+}
+
+#index header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translateX(-50%) translateY(-50%);
+
+    nav {
+        display: flex;
+    }
+
+    a[role="button"] {
+        font-size: 24px;
+        display: block;
+        margin: 10px;
+    }
+}
+
+.site-logo {
+    width: 256px
+}
+
+#index .background-video {
+    height: 100%;
+}
+
+#index .background-video video  {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    display: none;
+}
+
+#index .background-video video:first-child  {
+    display: block;
+}

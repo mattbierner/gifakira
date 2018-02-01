@@ -1,0 +1,21 @@
+button, a[role="button"]  {
+    font-family: $impact;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    outline: none;
+    border: none;
+    background: $background;
+    color: $text;
+    position: relative;
+    padding: 0 0.4em;
+    margin: 0 1em;
+    z-index: 0;
+    vertical-align: middle;
+    user-select: none;
+    line-height: 1.4em;
+}
+
+button:hover, a[role="button"]:hover {
+    color: $accent;
+}
