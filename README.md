@@ -9,7 +9,7 @@
 
 
 ## What
-Every scene of *Akira 1988* as a gif. Browse and share, or just watch an [endless stream](https://gifakira.com/stream.html).
+Every scene of *Akira (1988)* as a gif. Browse and share, or just watch an [endless stream](https://gifakira.com/stream.html).
 
 ## Building
 Scripts use webpack and TypeScript:
